@@ -167,7 +167,7 @@ main input:focus {
 }
 @media (max-width: 550px) {
   .page-container {
-    height: 80vh;
+    height: 85vh;
   }
   main {
     width: 100%;
@@ -177,6 +177,7 @@ main input:focus {
     display: flex;
     flex-flow: column wrap;
     font-family: "Satisfy", cursive;
+    gap: 4rem;
   }
   .side {
     display: none;

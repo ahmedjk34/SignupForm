@@ -21,6 +21,17 @@ function validate(input) {
     }
   });
 }
+function confirmPassword(password, confirmPassword) {
+  const errorMessage = confirmPassword.nextElementSibling;
+  confirmPassword.addEventListener("input", (e) => {
+    if (confirmPassword.value !== password.value) {
+      errorMessage.textContent = "Please enter matching passwords";
+    } else {
+      errorMessage.textContent = "";
+    }
+  });
+}
 validate(nameInput);
 validate(emailInput);
 validate(passwordInput);
+confirmPassword(passwordInput, confirmPasswordInput);

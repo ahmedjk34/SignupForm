@@ -18,28 +18,37 @@
       </div>
       <main>
         <h1>Sign Up</h1>
-        <form>
+        <form novalidate>
           <div class="inputHolder" data-holder="1">
             <span></span>
-            <input type="text" name="name" id="name" placeholder="Name" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              pattern="[a-zA-Z]+"
+              minlength="5"
+            />
             <span></span>
           </div>
           <div class="inputHolder" data-holder="1">
             <span></span>
             <input type="email" name="email" id="email" placeholder="Email" />
-            <span></span>
+            <span data-holder="1"></span>
           </div>
-          <div class="inputHolder" data-holder="2">
+          <div class="inputHolder">
             <span></span>
             <input
               type="password"
               name="password"
               id="password"
               placeholder="Password"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              minlength="8"
             />
             <span></span>
           </div>
-          <div class="inputHolder" data-holder="2">
+          <div class="inputHolder">
             <span></span>
             <input
               type="password"

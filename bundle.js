@@ -1,1 +1,1 @@
-console.log("cat");
+(()=>{const t=document.getElementById("name"),e=document.getElementById("email"),n=document.getElementById("password");function d(t){const e=t.nextElementSibling;t.addEventListener("input",(n=>{e.textContent="",t.validity.tooShort?e.textContent=` The ${t.getAttribute("id")} is too short`:t.validity.valid||(e.textContent=`Please enter a valid ${t.getAttribute("id")}`)}))}document.getElementById("confirmPassword"),document.getElementById("signup"),d(t),d(e),d(n)})();

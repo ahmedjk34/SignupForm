@@ -79,10 +79,16 @@ form {
   width: 90%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .inputHolder[data-holder="1"] {
-  align-items: flex-end;
+  justify-content: flex-end;
   margin-bottom: 4rem;
+}
+.inputHolder[data-holder="1"] > span {
+  position: absolute;
+  bottom: -1rem;
 }
 main input {
   width: 100%;
@@ -121,4 +127,12 @@ main input {
 .iconHolder > button:hover {
   background: lightblue;
   cursor: pointer;
+}
+.inputHolder[data-holder="2"] {
+  background-color: red;
+}
+@media (max-width: 1005px) {
+  .inputHolder span[data-holder="1"] {
+    bottom: -2.3rem;
+  }
 }
